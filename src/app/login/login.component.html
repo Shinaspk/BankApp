@@ -1,0 +1,31 @@
+
+<p>login works!</p>
+
+    
+
+    <div class="grid text-center">
+        <div class="g-col-4"></div>
+        <div class="g-col-4">
+
+        
+        <div>
+            <img src="../../assets/img/bank inmage.jpg" width=50px height="50px" alt="">
+
+        </div><br>
+        <h1> MY Bank</h1>
+        
+    <h6>{{aim}}</h6>
+        
+        <div>
+            <input #acno type="text" [placeholder]="account "id="logacnt">
+        </div><br>
+        <div>
+            <input #pswd type="text" placeholder="password"id="logpswrd">
+        </div><br>
+        <button type="button" class="btn btn-primary"(click)="login(acno,pswd)">Login</button><br>
+
+      
+    </div>
+    <div class="g-col-4"></div>
+
+    
