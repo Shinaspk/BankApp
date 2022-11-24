@@ -17,12 +17,12 @@
     <h6>{{aim}}</h6>
         
         <div>
-            <input #acno type="text" [placeholder]="account "id="logacnt">
+            <input [(ngModel)]="acno" type="text" [placeholder]="account "id="logacnt">
         </div><br>
         <div>
-            <input #pswd type="text" placeholder="password"id="logpswrd">
+            <input [(ngModel)]="pswd"  type="text" placeholder="password"id="logpswrd">
         </div><br>
-        <button type="button" class="btn btn-primary"(click)="login(acno,pswd)">Login</button><br>
+        <button type="button" class="btn btn-primary"(click)="login()">Login</button><br>
 
       
     </div>
