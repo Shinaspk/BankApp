@@ -3,23 +3,25 @@
     <div class="g-col-4"></div>
     <div class="g-col-4 ">
 
-    
-    <div>
-        <img src="./bank inmage.jpg " widt=50px height="50px" alt="">
 
-    </div><br>
-    <h1>Bank</h1>
-    <div>
-        <input type="text" placeholder="username"id="user">
-    </div><br>
-    <div>
-        <input type="text" placeholder="account number"id="acc">
-    </div><br>
-    <div>
-        <input type="text" placeholder="password"id="pass">
-    </div><br>
-    <button type="button" class="btn btn-primary" onclick="sign()">Register</button><br>
+        <div>
+            <img src="../../assets/bank inmage.jpg" widt=50px height="50px" alt="">
 
-    <a href="./index.html">sign in</a>
-</div>
-<div class="g-col-4"></div>
+        </div><br>
+        <h1>Bank</h1>
+
+        <form [formGroup]="registerForm">
+            <div>
+                <input formControlName="uname" type="text" name="username" placeholder="username" id="user">
+            </div> <br>
+            <div>
+                <input formControlName="acno" type="text" name="account" placeholder="account number" id="acc">
+            </div><br>
+            <div>
+                <input formControlName="pswd" type="text" name="pass" placeholder="password" id="pass">
+            </div><br>
+            <button type="button" class="btn btn-primary" (click)="register()">Register</button><br>
+        </form>
+        <a routerLink="">sign in</a>
+    </div>
+    <div class="g-col-4"></div>

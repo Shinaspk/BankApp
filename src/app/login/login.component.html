@@ -9,7 +9,7 @@
 
         
         <div>
-            <img src="../../assets/img/bank inmage.jpg" width=50px height="50px" alt="">
+            <img src="../../assets/bank inmage.jpg" width=50px height="50px" alt="">
 
         </div><br>
         <h1> MY Bank</h1>
@@ -17,14 +17,14 @@
     <h6>{{aim}}</h6>
         
         <div>
-            <input [(ngModel)]="acno" type="text" [placeholder]="account "id="logacnt">
+            <input [(ngModel)]="acno" type="text" name="acno" [placeholder]="account "id="logacnt">
         </div><br>
         <div>
-            <input [(ngModel)]="pswd"  type="text" placeholder="password"id="logpswrd">
+            <input [(ngModel)]="pswd"  type="text" name="password" placeholder="password"id="logpswrd">
         </div><br>
         <button type="button" class="btn btn-primary"(click)="login()">Login</button><br>
-
-      
+        <div> <a href="">Forgot password?</a> or  <a routerLink="register">sign up</a>
+        </div>
     </div>
     <div class="g-col-4"></div>
 

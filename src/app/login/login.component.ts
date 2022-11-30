@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +16,13 @@ account="enter ur acc no:"
 acno='';
 pswd='';
 
-//data base
 
-userDetails:any={
-  1000:{acno:1000,username:"shinas",password:1000,balance:1000},
-  1001:{acno:1001,username:"shin",password:1001,balance:1000},
-  1002:{acno:1002,username:"shins",password:1002,balance:1000},
-  1003:{acno:1003,username:"shina",password:1003,balance:1000},
+constructor(private ds:DataService,private router:Router){
 
 }
+//data base
+
+
   //it aumatical invokes when tghe object is created
   //object initializataion
    acnochange(event:any){
@@ -42,22 +42,27 @@ userDetails:any={
     //alert("login clicked")
     var acno=this.acno;
     var pswd=this.pswd;
-    var userDetails=this.userDetails;
+    var userDetails=this.ds.userDetails;
 
-    if (acno in userDetails){
-      if(pswd==userDetails[acno]['password']){
-    
-    alert("login successful")
+    const result=this.ds.login(acno,pswd);
+    if (result){
+      alert("login successful")
+    this.router.navigateByUrl('dashboard')
     }
+
+    // if (acno in userDetails){
+    //   if(pswd==userDetails[acno]['password']){
+    
+  //}
     else{
       alert("invalid password")
     }
-  }
-  else{
-    alert("invalid user details")
+  //}
+  // else{
+  //   alert("invalid user details")
   }
 }
-}
+//}
 
 //its a life cycle  hooks of angular
 //when the cpmponent is created at the same time it will ininitialize or authorized 

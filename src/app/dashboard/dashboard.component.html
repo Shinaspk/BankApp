@@ -1,1 +1,49 @@
-<p>dashboard works!</p>
+<div class="parent">
+    <div>
+        <h1>Welcome {{user}}</h1>
+        <a routerLink="/transaction">Transaction history</a>
+    </div>
+    <div class="child">
+        <div>
+            <img src="../../assets/bank inmage.jpg"  widt=50px height="50px" alt="">
+        </div>
+        <h1>Deposite</h1>
+        <br>
+        <div>
+            <input [(ngModel)]="acno" type="text" name="account" placeholder="account number" id="depo_acno">
+        </div><br>
+        <div>
+            <input [(ngModel)]="pswd" type="text" name="pass" placeholder="password" id="depo_pswd">
+        </div><br>
+        <div>
+            <input [(ngModel)]="amount" type="text" name="amount" placeholder="amount" id="depo_amnt">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="deposite()">Deposite</button><br>
+
+        <!-- <a routerLink="">sign in</a> -->
+    </div>
+
+    <div class="child">
+        <div>
+            <img src="../../assets/bank inmage.jpg"  widt=50px height="50px" alt="">
+        </div>
+        <h1>Withdraw</h1>
+        <br>
+        <div>
+            <input [(ngModel)]="acno1" type="text" name="account" placeholder="account number" id="with_acno">
+        </div><br>
+        <div>
+            <input [(ngModel)]="pswd1" type="text" name="pass" placeholder="password" id="depo_pswd">
+        </div><br>
+        <div>
+            <input [(ngModel)]="amount1" type="text" name="amount" placeholder="amount" id="depo_amnt">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="withdraw()">Withdraw</button><br>
+
+        <!-- <a routerLink="">sign in</a> -->
+    </div>
+
+
+
+
+</div>

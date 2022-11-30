@@ -46,3 +46,29 @@ html->view
 {
       path:value,componet:componentname
 },
+
+3)Angular services
+
+To hold reduntant data
+to create new services-ng g s service_name
+
+4)Dependancy Injection
+
+To share data between two dependent classes
+
+constructor(Private ds:DataService)
+
+5)Angular directives to manipulate DOM
+
+a)Component directives(array)
+b)Structural directives (table)
+->*ngFor
+
+6)Angulatr Formas
+
+a)Template driven Forms(first design the html template)
+b)Model driven Forms (first design model in ts file)
+   1)Reactive Forms
+   formGroup,array,control
+   for advanced validation
+   import from Reactive Forms Module (in app.module.ts)
